@@ -5,8 +5,12 @@ import {Meal} from './meal.model';
   selector: 'edit-meal',
   inputs: ['meal'],
   template: `
-    <h1><i>Edit Component</i></h1>
-    <input [(ngModel)]="meal.name">
+  <div class="edit-div">
+    <h1><i>Edit</i></h1>
+    <input placeholder="Name" [(ngModel)]="meal.name"><br>
+   <input placeholder="Details" [(ngModel)]="meal.details"><br>
+   <input placeholder="Calories" [(ngModel)]="meal.calories"><br>
+  </div>
   `
 })
 export class EditMealComponent {

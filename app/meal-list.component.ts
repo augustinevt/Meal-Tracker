@@ -10,26 +10,30 @@ import { FilterPipe } from './filter.pipe';
   directives: [MealDisplayComponent, NewMealComponent, EditMealComponent],
   pipes: [FilterPipe],
   template: `
-    <h1>FooFoo</h1>
-    <select (change)="selectFilter($event.target.value)">
+  <new-meal (newMeal)="createMeal($event)" ></new-meal>
+  <div class="jumbotron container">
+    <h1>Today's Meals</h1>
+    Filter by Calories <select (change)="selectFilter($event.target.value)">
       <option value="all">all</option>
       <option value="low">low</option>
       <option value="mid">moderate</option>
       <option value="high">high</option>
     </select>
-    <h1>meal-list</h1>
-    <meal-display
+    <div class="row">
+      <meal-display
+      class="col-sm-4"
       *ngFor="#currentMeal of meals | filter:filter"
       [meal]="currentMeal"
       (click)="clickedMeal(currentMeal)"
       [class.selected]="selectedMeal === currentMeal">
-    </meal-display>
-     <new-meal (newMeal)="createMeal($event)" ></new-meal>
+      </meal-display>
+    </div>
 
      <edit-meal
       *ngIf="selectedMeal"
       [meal]="selectedMeal">
      </edit-meal>
+    </div>
   `
 })
 export class MealListComponent {
