@@ -1,24 +1,20 @@
 body {
   background-color: gold;
 }
-
 h6 {
   border: solid;
   width: 60px;
   margin:auto;
 }
-
 .selected {
   color: red;
 }
-
 .meal-div {
   border: solid;
   text-align: center;
   background-color: orange;
   margin-top: 20px;
 }
-
 .edit-div {
   padding: 30px;
     input {
@@ -32,8 +28,6 @@ h6 {
       box-shadow: 2px 2px 15px;
     }
 }
-
-
 .new-div {
   font-size: 2em;
   font-family: monospace;
@@ -51,8 +45,7 @@ h6 {
   textarea {
     width: 300px;
     height: 80px;
-    box-shadow: 2px 2px 15px;
-
+    box-shadow: 2px 2px 16px;
   }
   button {
     width: 300px;
@@ -62,7 +55,6 @@ h6 {
     box-shadow: 2px 2px 15px;
   }
 }
-
 .big-meal {
   height: 500px;
 }

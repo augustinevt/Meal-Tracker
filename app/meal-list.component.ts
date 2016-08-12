@@ -28,7 +28,6 @@ import { FilterPipe } from './filter.pipe';
       [class.selected]="selectedMeal === currentMeal">
       </meal-display>
     </div>
-
      <edit-meal
       *ngIf="selectedMeal"
       [meal]="selectedMeal">

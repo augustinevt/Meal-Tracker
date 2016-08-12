@@ -8,27 +8,21 @@ import {Meal} from './meal.model';
 export class FilterPipe implements PipeTransform {
   transform(meals: Meal[], args ){
     var filterParam = args[0];
-
-    if(filterParam === 'all'){return meals}
-
-    else if(filterParam === 'low'){
+    if(filterParam === 'all'){
+      return meals
+    }else if(filterParam === 'low'){
       return meals.filter((meal)=>{1
         return meal.calories < 500;
       })
-    }
-
-    else if(filterParam === 'mid'){
+    }else if(filterParam === 'mid'){
       return meals.filter((meal)=>{
         return meal.calories > 500 && meal.calories < 1000;
       })
-    }
-
-    else if(filterParam === 'high'){
+    }else if(filterParam === 'high'){
       return meals.filter((meal)=>{
         return meal.calories > 1000;
       })
     }
 
   }
-
 }

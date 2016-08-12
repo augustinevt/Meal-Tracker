@@ -1,11 +1,9 @@
 import { Component } from 'angular2/core';
 import { Meal } from './meal.model';
-import {GrowDirective} from './grow.directive';
 
 @Component({
   selector: 'meal-display',
   inputs: ['meal'],
-  directives: [GrowDirective],
   template: `
     <div class="meal-div" mwGrow >
        <h3>{{meal.name}}</h3>
@@ -17,9 +15,6 @@ import {GrowDirective} from './grow.directive';
   `
 })
 export class MealDisplayComponent {
-
   public meal: Meal;
-
   constructor(){}
-
 }

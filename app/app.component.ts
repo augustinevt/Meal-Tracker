@@ -11,6 +11,4 @@ import { MealListComponent } from './meal-list.component';
     </div>
   `
 })
-export class AppComponent {
-
-}
+export class AppComponent {}
