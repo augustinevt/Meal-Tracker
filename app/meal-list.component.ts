@@ -41,10 +41,10 @@ export class MealListComponent {
   public filter: string = 'all';
   constructor(){
     this.meals = [
-      new Meal('Burger', 'Im so fancy', 1233),
-      new Meal('Fat Shake', 'Im so fancy', 1233),
-      new Meal('Blubber', 'Im so fancy', 1233),
-      new Meal('Corpulent Carp', 'Im so fancy', 1233)
+      new Meal('Burger', 'I ate it with relish', 200),
+      new Meal('Fat Shake', 'Shake it, shake it baby', 1233),
+      new Meal('Blubber', 'Found on beach', 700),
+      new Meal('Corpulent Carp', 'Compliments of the jp garden', 501)
     ];
     console.log(this.meals)
   }

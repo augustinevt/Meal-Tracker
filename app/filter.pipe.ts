@@ -16,7 +16,7 @@ export class FilterPipe implements PipeTransform {
       })
     }else if(filterParam === 'mid'){
       return meals.filter((meal)=>{
-        return meal.calories > 500 && meal.calories < 1000;
+        return meal.calories >= 500 && meal.calories < 1000;
       })
     }else if(filterParam === 'high'){
       return meals.filter((meal)=>{
