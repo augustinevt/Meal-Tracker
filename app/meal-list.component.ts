@@ -10,8 +10,9 @@ import { FilterPipe } from './filter.pipe';
   directives: [MealDisplayComponent, NewMealComponent, EditMealComponent],
   pipes: [FilterPipe],
   template: `
+  <h1>Meal Tracker</h1>
   <new-meal (newMeal)="createMeal($event)" ></new-meal>
-  <div class="jumbotron container">
+  <div class="mist">
     <h1>Today's Meals</h1>
     Filter by Calories <select (change)="selectFilter($event.target.value)">
       <option value="all">all</option>
@@ -42,9 +43,9 @@ export class MealListComponent {
   constructor(){
     this.meals = [
       new Meal('Burger', 'I ate it with relish', 200),
-      new Meal('Fat Shake', 'Shake it, shake it baby', 1233),
+      new Meal('Milk Shake', 'Shake it, shake it baby', 1233),
       new Meal('Blubber', 'Found on beach', 700),
-      new Meal('Corpulent Carp', 'Compliments of the jp garden', 501)
+      new Meal('Corpulent Carp', 'Complements of the jp garden', 501)
     ];
     console.log(this.meals)
   }

@@ -1,19 +1,41 @@
 body {
-  background-color: gold;
+  background-image: url(https://static.pexels.com/photos/4164/landscape-mountains-nature-mountain.jpeg);
+  background-size: cover;
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+  text-color: orange;
 }
+
+h1 {
+  font-size: 3em;
+  font-weight: bolder;
+  background-color: white;
+}
+
+
 h6 {
   border: solid;
   width: 60px;
   margin:auto;
 }
+
+select {
+  border-radius: 70px;
+  border: none;
+  width: 100px;
+  height: 40px;
+}
+
 .selected {
   color: red;
 }
 .meal-div {
   border: solid;
   text-align: center;
-  background-color: orange;
+  background-color: rgba(255, 153, 0, 0.5);
   margin-top: 20px;
+  border-radius: 20px;
 }
 .edit-div {
   padding: 30px;
