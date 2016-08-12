@@ -5,7 +5,7 @@ import { Meal } from './meal.model';
   selector: 'meal-display',
   inputs: ['meal'],
   template: `
-  <h2>  Meal: {{meal.name}} </h2>
+  <h2>  Meal: {{meal.name}} || {{meal.details}} || {{meal.calories}} </h2>
   `
 })
 export class MealDisplayComponent {
@@ -13,7 +13,5 @@ export class MealDisplayComponent {
   constructor(){
     console.log("arf")
   }
-  logMeal(){
-    console.log(this.meal);
-  }
+
 }

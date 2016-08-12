@@ -78,11 +78,11 @@ gulp.task('bower', ['jsBower', 'cssBower']);
 ////////////////////// SASS //////////////////////
 
 gulp.task('sassBuild', function() {
-  return gulp.src(['resources/styles/*'])
+  return gulp.src(['./resources/styles/*.scss'])
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./build/css'));
+    .pipe(gulp.dest('./resources/css'));
 });
 
 ////////////////////// SERVER //////////////////////
