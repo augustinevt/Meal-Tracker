@@ -1,14 +1,13 @@
 import { Component } from 'angular2/core';
-import { TemplateThingComponent } from './template-thing.component';
+import { MealListComponent } from './meal-list.component';
 
 @Component({
   selector: 'my-app',
-  directives: [TemplateThingComponent],
+  directives: [MealListComponent],
   template: `
     <div class="container">
       <h1>Template</h1>
-
-      <template-thing></template-thing>
+      <meal-list></meal-list>
     </div>
   `
 })
