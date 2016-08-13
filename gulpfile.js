@@ -35,12 +35,12 @@ gulp.task('jsBower', ['jsBowerClean'], function() {
     .pipe(gulp.dest('./build/js'));
 });
 gulp.task('cssBowerClean', function(){
-  return del(['./build/css/vendor.css']);
+  return del(['./resources/styles/vendor.css']);
 });
 gulp.task('cssBower', ['cssBowerClean'], function() {
   return gulp.src(lib.ext('css').files)
     .pipe(concat('vendor.css'))
-    .pipe(gulp.dest('./build/css'));
+    .pipe(gulp.dest('./resources/styles'));
 });
 gulp.task('bower', ['jsBower', 'cssBower']);
 gulp.task('sassBuild', function() {

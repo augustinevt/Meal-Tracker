@@ -1,82 +1,69 @@
 body {
   background-image: url(https://static.pexels.com/photos/4164/landscape-mountains-nature-mountain.jpeg);
-  background-size: cover;
+}
+
+div {
   text-align: center;
-  font-family: monospace;
-  font-weight: bold;
-  text-color: orange;
 }
 
-h1 {
-  font-size: 3em;
-  font-weight: bolder;
-  background-color: white;
+h3 {
+  padding: 10px;
+}
+textarea {
+  padding: 0;
 }
 
-
-h6 {
-  border: solid;
-  width: 60px;
-  margin:auto;
+.edit-div input {
+  margin: 10px;
 }
 
-select {
-  border-radius: 70px;
+input, textarea {
+  width: 200px;
+  height: 50px;
+  background-color: rgba(93, 160, 223, 0.7);
   border: none;
-  width: 100px;
-  height: 40px;
+  font-size: 3em;
 }
 
-.selected {
-  color: red;
+button {
+  width: 200px;
+  height: 70px;
+  border-radius: 30px;
+  background-color: rgba(93, 160, 223, 0.5);
+  border:none;
 }
-.meal-div {
-  border: solid;
+
+.height-control {
+  height: 500px;
+}
+
+.meal-list {
+  background-color: rgba(188, 209, 167, 0.5);
   text-align: center;
-  background-color: rgba(255, 153, 0, 0.5);
-  margin-top: 20px;
+}
+
+.detail-list {
+  background-color: rgba(209, 167, 167, 0.5);
+}
+
+.meal-div {
+  background-color: orange;
+  margin: 30px;
+  padding: 10px;
   border-radius: 20px;
 }
+
 .edit-div {
-  padding: 30px;
-    input {
-      text-align: center;
-      border: none;
-      width: 200px;
-      height: 60px;
-      margin: 10px;
-      border-radius: 10px;
-      outline:none;
-      box-shadow: 2px 2px 15px;
-    }
+//  background-color: yellow;
 }
-.new-div {
-  font-size: 2em;
-  font-family: monospace;
-  text-align: center;
-  input, textarea {
-    text-align: center;
-    border: none;
-    width: 200px;
-    height: 60px;
-    margin: 10px;
-    border-radius: 10px;
-    outline:none;
-    box-shadow: 2px 2px 15px;
-  }
-  textarea {
-    width: 300px;
-    height: 80px;
-    box-shadow: 2px 2px 16px;
-  }
-  button {
-    width: 300px;
-    height: 60px;
-    margin-top: 20px;
-    border:none;
-    box-shadow: 2px 2px 15px;
-  }
+
+.detail-div h3 {
+  background-color: rgba(250,250,250, 0.5);
+  border-radius: 30px;
+  text-align: left;
 }
-.big-meal {
-  height: 500px;
+
+.new-list {
+  background-color: rgba(209, 167, 209, 0.6);
+  padding: 20px;
 }

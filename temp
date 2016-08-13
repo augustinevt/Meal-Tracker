@@ -1,0 +1,20 @@
+<meal-display
+  *ngFor="#currentMeal of meals | filter:filter"
+  [meal]="currentMeal"
+  (click)="clickedMeal(currentMeal)"
+  [class.selected]="selectedMeal === currentMeal">
+</meal-display>
+
+<select (change)="selectFilter($event.target.value)">
+  <option value="all">all</option>
+  <option value="low">low</option>
+  <option value="mid">moderate</option>
+  <option value="high">high</option>
+</select>
+
+<new-meal (newMeal)="createMeal($event)" ></new-meal>
+
+<edit-meal
+  *ngIf="selectedMeal"
+  [meal]="selectedMeal">
+</edit-meal>

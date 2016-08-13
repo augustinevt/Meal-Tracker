@@ -5,12 +5,23 @@ import { Meal } from './meal.model';
   selector: 'new-meal',
   outputs: ['newMeal'],
   template: `
-    <div class="container new-div ">
-      <h3>New Meal</h3>
-      <input placeholder='name' #userName><br>
-      <input placeholder='calories' #userCalories><br>
-      <textarea placeholder='details' #userDetails></textarea><br>
-      <button class="btn-default" (click)="onSubmit(userName, userDetails, userCalories)" >Add</button>
+
+    <div class="new-div">
+      <div class="row">
+        <div class="col-sm-3">
+            <label>name</label>
+            <input #userName><br>
+        </div>
+        <div class="col-sm-3">
+          <label>Calories</label>
+          <input #userCalories><br>
+        </div>
+        <div class="col-sm-3">
+            <label>Details</label>
+            <textarea #userDetails></textarea>
+        </div>
+          <button (click)="onSubmit(userName, userDetails, userCalories)" >Add</button>
+      </div>
     </div>
   `
 })
@@ -20,7 +31,7 @@ export class NewMealComponent {
   constructor(){
     this.newMeal = new EventEmitter();
   }
-  onSubmit(name: HTMLInputElement, details: HTMLInputElement, calories: HTMLInputElement,){
+  onSubmit(name: HTMLInputElement, details: HTMLInputElement, calories: HTMLInputElement){
     this.newMeal.emit([
       name.value,
       details.value,

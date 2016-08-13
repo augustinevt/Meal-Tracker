@@ -6,11 +6,7 @@ import { Meal } from './meal.model';
   inputs: ['meal'],
   template: `
     <div class="meal-div" mwGrow >
-       <h3>{{meal.name}}</h3>
-       <h6>Details:</h6>
-        {{meal.details}}
-       <h6>Calories:</h6>
-        {{meal.calories}}
+       <h2>{{meal.name}}</h2>
     </div>
   `
 })

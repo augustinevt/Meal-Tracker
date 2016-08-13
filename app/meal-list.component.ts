@@ -2,38 +2,49 @@ import { Component } from 'angular2/core';
 import { Meal } from './meal.model';
 import { MealDisplayComponent } from './meal-display.component';
 import { NewMealComponent } from './new-meal.component';
-import { EditMealComponent } from './edit-meal.component';
+import { MealDetailsComponent } from './meal-details.component';
 import { FilterPipe } from './filter.pipe';
 
 @Component({
   selector: 'meal-list',
-  directives: [MealDisplayComponent, NewMealComponent, EditMealComponent],
+  directives: [MealDisplayComponent, NewMealComponent, MealDetailsComponent],
   pipes: [FilterPipe],
   template: `
-  <h1>Meal Tracker</h1>
-  <new-meal (newMeal)="createMeal($event)" ></new-meal>
-  <div class="mist">
-    <h1>Today's Meals</h1>
-    Filter by Calories <select (change)="selectFilter($event.target.value)">
-      <option value="all">all</option>
-      <option value="low">low</option>
-      <option value="mid">moderate</option>
-      <option value="high">high</option>
-    </select>
+
+
+  <div class="container">
     <div class="row">
-      <meal-display
-      class="col-sm-4"
-      *ngFor="#currentMeal of meals | filter:filter"
-      [meal]="currentMeal"
-      (click)="clickedMeal(currentMeal)"
-      [class.selected]="selectedMeal === currentMeal">
-      </meal-display>
+      <div class="col-sm-12 temp-height">
+        <h1>MEAL TRACKER</h1>
+      </div>
+      <div class="col-sm-12 new-list">
+        <new-meal (newMeal)="createMeal($event)" ></new-meal>
+      </div>
     </div>
-     <edit-meal
-      *ngIf="selectedMeal"
-      [meal]="selectedMeal">
-     </edit-meal>
+    <div class="row height-control">
+      <div class="col-sm-4 height-control meal-list">
+        <select (change)="selectFilter($event.target.value)">
+          <option value="all">all</option>
+          <option value="low">low</option>
+          <option value="mid">moderate</option>
+          <option value="high">high</option>
+        </select>
+        <meal-display
+          *ngFor="#currentMeal of meals | filter:filter"
+          [meal]="currentMeal"
+          (click)="clickedMeal(currentMeal)"
+          [class.selected]="selectedMeal === currentMeal">
+        </meal-display>
+      </div>
+      <div class="col-sm-8 height-control detail-list">
+        <meal-details
+          *ngIf="selectedMeal"
+          [meal]="selectedMeal">
+        </meal-details>
+      </div>
     </div>
+  </div>
+
   `
 })
 export class MealListComponent {
@@ -47,6 +58,7 @@ export class MealListComponent {
       new Meal('Blubber', 'Found on beach', 700),
       new Meal('Corpulent Carp', 'Complements of the jp garden', 501)
     ];
+    this.selectedMeal = this.meals[0];
     console.log(this.meals)
   }
   createMeal(arg: string[]){
