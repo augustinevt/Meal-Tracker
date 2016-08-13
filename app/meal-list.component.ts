@@ -56,7 +56,7 @@ export class MealListComponent {
       new Meal('Burger', 'I ate it with relish', 200),
       new Meal('Milk Shake', 'Shake it, shake it baby', 1233),
       new Meal('Blubber', 'Found on beach', 700),
-      new Meal('Corpulent Carp', 'Complements of the jp garden', 501)
+      new Meal('Corpulent Carp', 'Compliments of the jp garden', 501)
     ];
     this.selectedMeal = this.meals[0];
     console.log(this.meals)
